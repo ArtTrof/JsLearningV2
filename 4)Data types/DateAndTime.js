@@ -20,7 +20,7 @@ console.log(date.getHours());//the hour in your current timezone
 console.log(date.getUTCHours());//the hour in UTC+0
 
 let date = new Date(2013, 0, 32); // 32 Jan 2013 ?!?
-alert(date); // ...is 1st Feb 2013!
+console.log(date); // ...is 1st Feb 2013!
 
 let date = new Date(2016, 1, 28);
 date.setDate(date.getDate() + 2);
@@ -31,7 +31,10 @@ for (let i = 0; i < 100000; i++) {
     let doSomething = i * i * i;
 }
 let end = new Date(); // end measuring time
-alert(`The loop took ${end - start} ms`);
+console.log(`The loop took ${end - start} ms`);
 
 let ms = Date.parse('2012-01-26T13:51:50.417-07:00');
-alert(ms); // 1327611110417  (timestamp)
+console.log(ms); // 1327611110417  (timestamp)
+
+let date = new Date(Date.parse('2012-01-26T13:51:50.417-07:00'));
+console.log(date);
